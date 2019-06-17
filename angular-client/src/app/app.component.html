@@ -1,0 +1,23 @@
+<div>
+  <h1>File Name: </h1>
+  <ul class="list-group" *ngFor="let file of filesName">
+    <li class="list-group-item" (click)="getTables(file)">{{ file }}</li>
+  </ul>
+</div>
+
+<div *ngIf="tabelName">
+  <h1>Tabel Name: </h1>
+  <ul class="list-group" *ngFor="let tabel of tabelName">
+    <li class="list-group-item" (click)="getTableInfo(tabel[1])">{{ tabel[0] }}</li>
+  </ul>
+</div>
+
+<div *ngIf="tabelIndex">
+  <h1>Tabel Information: </h1>
+  <ul class="list-group" *ngFor="let data of tabelIndex">
+      <li class="list-group-item">{{ data.title }}</li>
+      <li class="list-group-item">{{ data.rows }}</li>
+      <li class="list-group-item">{{ data.notes }}</li>
+      <li class="list-group-item">{{ data.columns }}</li>
+    </ul>
+</div>
